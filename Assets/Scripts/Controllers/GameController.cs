@@ -36,7 +36,7 @@ public class GameController : MonoSingleton<GameController>
 
     private CellData[,] _field;
 
-    private string[] _words;
+    private HashSet<string> _words;
     private Dictionary<char, CharacterRule> _rules;
     private Dictionary<char, Sprite> _charactersSprites;
     private Dictionary<char, Sprite> _charactersActiveSprites;
@@ -56,9 +56,7 @@ public class GameController : MonoSingleton<GameController>
     public override void Awake()
     {
         Screen.orientation = ScreenOrientation.Portrait;
-
-        _field = new CellData[ROWS, COLUMNS];
-
+        
         LoadRules();
         LoadWords();
         LoadSprites();
@@ -81,35 +79,32 @@ public class GameController : MonoSingleton<GameController>
             return;
         }
 
-        foreach (var referenceWord in _words)
+        if (!_words.Contains(word.ToLower()))
         {
-            if (referenceWord.ToLower() != word.ToLower())
-            {
-                continue;
-            }
-
-            foreach (var cell in _selectedCells)
-            {
-                ObjectPoolManager.Instance.Push(CellPrefab, cell);
-                _cells.Remove(cell);
-            }
-            _selectedCells = new List<CellData>();
-
-            MoveCells();
-
-            if (word.Length < 6)
-            {
-                _collectedScoreInRound += word.Length;
-            }
-            else
-            {
-                _collectedScoreInRound += word.Length * 2;
-            }
-
-            CollectedScoreChangedEvent.Invoke(_collectedScoreInRound);
-            WordChangedEvent.Invoke("");
             return;
         }
+
+        foreach (var cell in _selectedCells)
+        {
+            _field[(int)-cell.transform.localPosition.y, (int)cell.transform.localPosition.x] = null;
+            _cells.Remove(cell);
+            ObjectPoolManager.Instance.Push(CellPrefab, cell);
+        }
+        _selectedCells = new List<CellData>();
+
+        MoveCells();
+
+        if (word.Length < 6)
+        {
+            _collectedScoreInRound += word.Length;
+        }
+        else
+        {
+            _collectedScoreInRound += word.Length * 2;
+        }
+
+        CollectedScoreChangedEvent.Invoke(_collectedScoreInRound);
+        WordChangedEvent.Invoke("");
     }
 
     public void UnselectAll()
@@ -213,7 +208,7 @@ public class GameController : MonoSingleton<GameController>
     {
         var asset = Resources.Load("rus_words") as TextAsset;
 
-        _words = Regex.Split(asset.text, "\r\n");
+        _words = new HashSet<string>(Regex.Split(asset.text, "\r\n"));
     }
 
     private void LoadSprites()
@@ -244,7 +239,9 @@ public class GameController : MonoSingleton<GameController>
 
         char[] characters = GenerateCharactersArray();
 
+        _field = new CellData[ROWS, COLUMNS];
         _cells = new List<CellData>();
+
         foreach (char c in characters)
         {
             var cellData = ObjectPoolManager.Instance.Get(CellPrefab) as CellData;
@@ -429,7 +426,7 @@ public class GameController : MonoSingleton<GameController>
         {
             return;
         }
-        
+
         SpawnCharacter(GetEmptyCellPosition(), GenerateCharacter());
     }
 
@@ -448,7 +445,6 @@ public class GameController : MonoSingleton<GameController>
 
     private Vector2 GetEmptyCellPosition()
     {
-
         int higgestEmptyRowIndex = ROWS - 1;
 
         for (int i = ROWS - 1; i >= 0; i--)
@@ -486,6 +482,9 @@ public class GameController : MonoSingleton<GameController>
         }
 
         DisplacementController.Instance.StopAll();
+
+        _field = null;
+        _cells = null;
 
         Field.SetActive(false);
     }
