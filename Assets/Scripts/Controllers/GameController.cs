@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Lib.Util;
-using UniRx;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,9 +20,9 @@ public class GameController : MonoSingleton<GameController>
     public const int ROWS = 8;
     public const int COLUMNS = 8;
     public const int ROUND_DURATION = 60;
-    public const int TIMER_TICK_INTERVAL = 1000;
-    public const int ADDITIONAL_CHARACTERS_TIMER_INTERVAL = 4000;
-    public const float FALL_SPEED = .25f;
+    public const float TIMER_TICK_INTERVAL = 1;
+    public const float ADDITIONAL_CHARACTERS_TIMER_INTERVAL = 4;
+    public const float FALL_SPEED = .225f;
 
     public Event<int> TimerCounterChangedEvent = new Event<int>();
     public Event<int> CollectedScoreChangedEvent = new Event<int>();
@@ -52,11 +52,12 @@ public class GameController : MonoSingleton<GameController>
     private IDisposable _roundTimer;
     private IDisposable _characterFallTimer;
     private int _ticksOfRound;
+    private bool isTimerWorked;
 
     public override void Awake()
     {
         Screen.orientation = ScreenOrientation.Portrait;
-        
+
         LoadRules();
         LoadWords();
         LoadSprites();
@@ -217,7 +218,7 @@ public class GameController : MonoSingleton<GameController>
         _charactersActiveSprites = new Dictionary<char, Sprite>();
 
         Sprite[] spritesActive = Resources.LoadAll<Sprite>("Characters-active");
-        Sprite[] sprites = Resources.LoadAll<Sprite>("Characters");
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Characters-normal");
 
         foreach (var sprite in spritesActive)
         {
@@ -228,7 +229,6 @@ public class GameController : MonoSingleton<GameController>
         {
             _charactersSprites.Add(sprite.name.ToCharArray()[sprite.name.Length - 1], sprite);
         }
-
     }
 
     private void PrepareGame()
@@ -392,42 +392,48 @@ public class GameController : MonoSingleton<GameController>
 
     private void StartGame()
     {
-        _roundTimer = Observable.Interval(TimeSpan.FromMilliseconds(TIMER_TICK_INTERVAL))
-            .Subscribe(_ => { OnTimerTick(); });
-
-        _characterFallTimer = Observable.Interval(TimeSpan.FromMilliseconds(ADDITIONAL_CHARACTERS_TIMER_INTERVAL))
-            .Subscribe(_ => { SpawnAdditionalCharacter(); });
+        StartCoroutine(TimerTick());
+        StartCoroutine(SpawnAdditionalCharacter());
 
         Field.SetActive(true);
     }
 
-    private void OnTimerTick()
+    private IEnumerator TimerTick()
     {
-        _ticksOfRound++;
-
-        TimerCounterChangedEvent.Invoke(ROUND_DURATION - _ticksOfRound);
-
-        if (_ticksOfRound >= ROUND_DURATION)
+        isTimerWorked = true;
+        while (isTimerWorked)
         {
-            _roundTimer.Dispose();
-            _characterFallTimer.Dispose();
+            yield return new WaitForSeconds(TIMER_TICK_INTERVAL);
 
-            if (_collectedScoreInRound > _maxCollectedScore)
+            _ticksOfRound++;
+
+            TimerCounterChangedEvent.Invoke(ROUND_DURATION - _ticksOfRound);
+
+            if (_ticksOfRound >= ROUND_DURATION)
             {
-                _maxCollectedScore = _collectedScoreInRound;
+                isTimerWorked = false;
+
+                if (_collectedScoreInRound > _maxCollectedScore)
+                {
+                    _maxCollectedScore = _collectedScoreInRound;
+                }
+                StateController.Instance.EndRoundState(_collectedScoreInRound, _maxCollectedScore);
             }
-            StateController.Instance.EndRoundState(_collectedScoreInRound, _maxCollectedScore);
+
         }
     }
 
-    private void SpawnAdditionalCharacter()
+    private IEnumerator SpawnAdditionalCharacter()
     {
-        if (_cells.Count == ROWS * COLUMNS)
+        while (isTimerWorked)
         {
-            return;
-        }
+            yield return new WaitForSeconds(ADDITIONAL_CHARACTERS_TIMER_INTERVAL);
 
-        SpawnCharacter(GetEmptyCellPosition(), GenerateCharacter());
+            if (_cells.Count < ROWS * COLUMNS)
+            {
+                SpawnCharacter(GetEmptyCellPosition(), GenerateCharacter());
+            }
+        }
     }
 
     private void SpawnCharacter(Vector2 position, char c)
@@ -475,6 +481,8 @@ public class GameController : MonoSingleton<GameController>
 
     private void ClearField()
     {
+        isTimerWorked = false;
+
         var children = Field.GetComponentsInChildren<CellData>();
         foreach (CellData child in children)
         {

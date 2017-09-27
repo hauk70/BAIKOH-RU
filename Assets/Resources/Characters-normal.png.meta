@@ -1,75 +1,42 @@
 fileFormatVersion: 2
-guid: ffce2dbf279b6664094ea7d1e83815a0
-timeCreated: 1506337092
+guid: 3009eaa24b8e94240bc39a0b07487d95
+timeCreated: 1506519294
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "\u0431\u0443\u043A\u0432\u044B_0"
-    21300002: "\u0431\u0443\u043A\u0432\u044B_1"
-    21300004: "\u0431\u0443\u043A\u0432\u044B_2"
-    21300006: "\u0431\u0443\u043A\u0432\u044B_3"
-    21300008: "\u0431\u0443\u043A\u0432\u044B_4"
-    21300010: "\u0431\u0443\u043A\u0432\u044B_5"
-    21300012: "\u0431\u0443\u043A\u0432\u044B_6"
-    21300014: "\u0431\u0443\u043A\u0432\u044B_7"
-    21300016: "\u0431\u0443\u043A\u0432\u044B_8"
-    21300018: "\u0431\u0443\u043A\u0432\u044B_9"
-    21300020: "\u0431\u0443\u043A\u0432\u044B_10"
-    21300022: "\u0431\u0443\u043A\u0432\u044B_11"
-    21300024: "\u0431\u0443\u043A\u0432\u044B_12"
-    21300026: "\u0431\u0443\u043A\u0432\u044B_13"
-    21300028: "\u0431\u0443\u043A\u0432\u044B_14"
-    21300030: "\u0431\u0443\u043A\u0432\u044B_15"
-    21300032: "\u0431\u0443\u043A\u0432\u044B_16"
-    21300034: "\u0431\u0443\u043A\u0432\u044B_17"
-    21300036: "\u0431\u0443\u043A\u0432\u044B_18"
-    21300038: "\u0431\u0443\u043A\u0432\u044B_19"
-    21300040: "\u0431\u0443\u043A\u0432\u044B_20"
-    21300042: "\u0431\u0443\u043A\u0432\u044B_21"
-    21300044: "\u0431\u0443\u043A\u0432\u044B_22"
-    21300046: "\u0431\u0443\u043A\u0432\u044B_23"
-    21300048: "\u0431\u0443\u043A\u0432\u044B_24"
-    21300050: "\u0431\u0443\u043A\u0432\u044B_25"
-    21300052: "\u0431\u0443\u043A\u0432\u044B_26"
-    21300054: "\u0431\u0443\u043A\u0432\u044B_27"
-    21300056: "\u0431\u0443\u043A\u0432\u044B_28"
-    21300058: "\u0431\u0443\u043A\u0432\u044B_29"
-    21300060: "\u0431\u0443\u043A\u0432\u044B_30"
-    21300062: "\u0431\u0443\u043A\u0432\u044B_31"
-    21300064: "\u0431\u0443\u043A\u0432\u044B_32"
-    21300066: "Characters_\u0410"
-    21300068: "Characters_\u0423"
-    21300070: "Characters_\u041E"
-    21300072: "Characters_\u042B"
-    21300074: "Characters_\u0418"
-    21300076: "Characters_\u042D"
-    21300078: "Characters_\u042F"
-    21300080: "Characters_\u042E"
-    21300082: "Characters_\u0401"
-    21300084: "Characters_\u0415"
-    21300086: "Characters_\u0411"
-    21300088: "Characters_\u0412"
-    21300090: "Characters_\u0413"
-    21300092: "Characters_\u0414"
-    21300094: "Characters_\u0416"
-    21300096: "Characters_\u0417"
-    21300098: "Characters_\u0419"
-    21300100: "Characters_\u041A"
-    21300102: "Characters_\u041B"
-    21300104: "Characters_\u041C"
-    21300106: "Characters_\u041D"
-    21300108: "Characters_\u041F"
-    21300110: "Characters_\u0420"
-    21300112: "Characters_\u0421"
-    21300114: "Characters_\u0422"
-    21300116: "Characters_\u0424"
-    21300118: "Characters_\u0425"
-    21300120: "Characters_\u0426"
-    21300122: "Characters_\u0427"
-    21300124: "Characters_\u0428"
-    21300126: "Characters_\u042C"
-    21300128: "Characters_\u042A"
-    21300130: "Characters_\u0429"
+    21300000: "Characters-normal_\u0411"
+    21300002: "Characters-normal_\u0412"
+    21300004: "Characters-normal_\u0413"
+    21300006: "Characters-normal_\u0414"
+    21300008: "Characters-normal_\u0416"
+    21300010: "Characters-normal_\u0417"
+    21300012: "Characters-normal_\u0419"
+    21300014: "Characters-normal_\u041A"
+    21300016: "Characters-normal_\u041B"
+    21300018: "Characters-normal_\u041C"
+    21300020: "Characters-normal_\u041D"
+    21300022: "Characters-normal_\u041F"
+    21300024: "Characters-normal_\u0420"
+    21300026: "Characters-normal_\u0421"
+    21300028: "Characters-normal_\u0422"
+    21300030: "Characters-normal_\u0424"
+    21300032: "Characters-normal_\u0425"
+    21300034: "Characters-normal_\u0426"
+    21300036: "Characters-normal_\u0427"
+    21300038: "Characters-normal_\u0428"
+    21300040: "Characters-normal_\u042C"
+    21300042: "Characters-normal_\u042A"
+    21300044: "Characters-normal_\u0429"
+    21300046: "Characters-normal_\u0415"
+    21300048: "Characters-normal_\u0401"
+    21300050: "Characters-normal_\u042E"
+    21300052: "Characters-normal_\u042F"
+    21300054: "Characters-normal_\u042D"
+    21300056: "Characters-normal_\u0418"
+    21300058: "Characters-normal_\u042B"
+    21300060: "Characters-normal_\u041E"
+    21300062: "Characters-normal_\u0423"
+    21300064: "Characters-normal_\u0410"
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -96,7 +63,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -122,33 +89,33 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -157,13 +124,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Characters_\u0410"
+      name: "Characters-normal_\u0411"
       rect:
         serializedVersion: 2
-        x: 42
-        y: 57
-        width: 86
-        height: 86
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,13 +138,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0423"
+      name: "Characters-normal_\u0412"
       rect:
         serializedVersion: 2
-        x: 144
-        y: 57
-        width: 86
-        height: 86
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,13 +152,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u041E"
+      name: "Characters-normal_\u0413"
       rect:
         serializedVersion: 2
-        x: 251
-        y: 57
-        width: 85
-        height: 86
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,13 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u042B"
+      name: "Characters-normal_\u0414"
       rect:
         serializedVersion: 2
-        x: 357
-        y: 57
-        width: 86
-        height: 86
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,13 +180,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0418"
+      name: "Characters-normal_\u0416"
       rect:
         serializedVersion: 2
-        x: 471
-        y: 57
-        width: 86
-        height: 86
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,13 +194,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u042D"
+      name: "Characters-normal_\u0417"
       rect:
         serializedVersion: 2
-        x: 576
-        y: 57
-        width: 86
-        height: 86
+        x: 400
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,13 +208,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u042F"
+      name: "Characters-normal_\u0419"
       rect:
         serializedVersion: 2
-        x: 681
-        y: 57
-        width: 86
-        height: 86
+        x: 480
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,13 +222,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u042E"
+      name: "Characters-normal_\u041A"
       rect:
         serializedVersion: 2
-        x: 786
-        y: 57
-        width: 86
-        height: 86
+        x: 560
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,13 +236,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0401"
+      name: "Characters-normal_\u041B"
       rect:
         serializedVersion: 2
-        x: 892
-        y: 57
-        width: 86
-        height: 86
+        x: 640
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,13 +250,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0415"
+      name: "Characters-normal_\u041C"
       rect:
         serializedVersion: 2
-        x: 997
-        y: 57
-        width: 86
-        height: 86
+        x: 720
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,13 +264,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0411"
+      name: "Characters-normal_\u041D"
       rect:
         serializedVersion: 2
-        x: 1101
-        y: 57
-        width: 86
-        height: 86
+        x: 800
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,13 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0412"
+      name: "Characters-normal_\u041F"
       rect:
         serializedVersion: 2
-        x: 1209
-        y: 57
-        width: 86
-        height: 86
+        x: 880
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,13 +292,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0413"
+      name: "Characters-normal_\u0420"
       rect:
         serializedVersion: 2
-        x: 1315
-        y: 57
-        width: 86
-        height: 86
+        x: 960
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,13 +306,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0414"
+      name: "Characters-normal_\u0421"
       rect:
         serializedVersion: 2
-        x: 1420
-        y: 57
-        width: 86
-        height: 86
+        x: 1040
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,13 +320,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0416"
+      name: "Characters-normal_\u0422"
       rect:
         serializedVersion: 2
-        x: 1525
-        y: 57
-        width: 86
-        height: 86
+        x: 1120
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,13 +334,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0417"
+      name: "Characters-normal_\u0424"
       rect:
         serializedVersion: 2
-        x: 1639
-        y: 57
-        width: 86
-        height: 86
+        x: 1200
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,13 +348,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0419"
+      name: "Characters-normal_\u0425"
       rect:
         serializedVersion: 2
-        x: 1744
-        y: 57
-        width: 86
-        height: 86
+        x: 1280
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,13 +362,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u041A"
+      name: "Characters-normal_\u0426"
       rect:
         serializedVersion: 2
-        x: 1849
-        y: 57
-        width: 86
-        height: 86
+        x: 1360
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,13 +376,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u041B"
+      name: "Characters-normal_\u0427"
       rect:
         serializedVersion: 2
-        x: 1954
-        y: 57
-        width: 86
-        height: 86
+        x: 1440
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,13 +390,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u041C"
+      name: "Characters-normal_\u0428"
       rect:
         serializedVersion: 2
-        x: 2060
-        y: 57
-        width: 86
-        height: 86
+        x: 1520
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,13 +404,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u041D"
+      name: "Characters-normal_\u042C"
       rect:
         serializedVersion: 2
-        x: 2165
-        y: 57
-        width: 86
-        height: 86
+        x: 1600
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u041F"
+      name: "Characters-normal_\u042A"
       rect:
         serializedVersion: 2
-        x: 2270
-        y: 57
-        width: 86
-        height: 86
+        x: 1680
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,13 +432,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0420"
+      name: "Characters-normal_\u0429"
       rect:
         serializedVersion: 2
-        x: 2375
-        y: 57
-        width: 86
-        height: 86
+        x: 1760
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -479,13 +446,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0421"
+      name: "Characters-normal_\u0415"
       rect:
         serializedVersion: 2
-        x: 2489
-        y: 57
-        width: 86
-        height: 86
+        x: 1840
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,13 +460,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0422"
+      name: "Characters-normal_\u0401"
       rect:
         serializedVersion: 2
-        x: 2595
-        y: 57
-        width: 86
-        height: 86
+        x: 1920
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,13 +474,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0424"
+      name: "Characters-normal_\u042E"
       rect:
         serializedVersion: 2
-        x: 2699
-        y: 57
-        width: 86
-        height: 86
+        x: 2000
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,13 +488,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0425"
+      name: "Characters-normal_\u042F"
       rect:
         serializedVersion: 2
-        x: 2804
-        y: 57
-        width: 86
-        height: 86
+        x: 2080
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,13 +502,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0426"
+      name: "Characters-normal_\u042D"
       rect:
         serializedVersion: 2
-        x: 2911
-        y: 57
-        width: 86
-        height: 86
+        x: 2160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,13 +516,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0427"
+      name: "Characters-normal_\u0418"
       rect:
         serializedVersion: 2
-        x: 3016
-        y: 57
-        width: 86
-        height: 86
+        x: 2240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -563,13 +530,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0428"
+      name: "Characters-normal_\u042B"
       rect:
         serializedVersion: 2
-        x: 3130
-        y: 57
-        width: 86
-        height: 86
+        x: 2320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,13 +544,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u042C"
+      name: "Characters-normal_\u041E"
       rect:
         serializedVersion: 2
-        x: 3235
-        y: 57
-        width: 86
-        height: 86
+        x: 2400
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,13 +558,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u042A"
+      name: "Characters-normal_\u0423"
       rect:
         serializedVersion: 2
-        x: 3340
-        y: 57
-        width: 86
-        height: 86
+        x: 2480
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,13 +572,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: "Characters_\u0429"
+      name: "Characters-normal_\u0410"
       rect:
         serializedVersion: 2
-        x: 3445
-        y: 57
-        width: 86
-        height: 86
+        x: 2560
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,42 +1,42 @@
 fileFormatVersion: 2
-guid: a99fe67585fffb94eaf56832dee954cc
-timeCreated: 1506335356
+guid: 2901298feedb4a140a839330bf6e097f
+timeCreated: 1506521997
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Characters-active_\u0410"
-    21300002: "Characters-active_\u0423"
-    21300004: "Characters-active_\u041E"
-    21300006: "Characters-active_\u042B"
-    21300008: "Characters-active_\u0418"
-    21300010: "Characters-active_\u042D"
-    21300012: "Characters-active_\u042F"
-    21300014: "Characters-active_\u042E"
-    21300016: "Characters-active_\u0401"
-    21300018: "Characters-active_\u0415"
-    21300020: "Characters-active_\u0411"
-    21300022: "Characters-active_\u0412"
-    21300024: "Characters-active_\u0413"
-    21300026: "Characters-active_\u0414"
-    21300028: "Characters-active_\u0416"
-    21300030: "Characters-active_\u0417"
-    21300032: "Characters-active_\u0419"
-    21300034: "Characters-active_\u041A"
-    21300036: "Characters-active_\u041B"
-    21300038: "Characters-active_\u041C"
-    21300040: "Characters-active_\u041D"
-    21300042: "Characters-active_\u041F"
-    21300044: "Characters-active_\u0420"
-    21300046: "Characters-active_\u0421"
-    21300048: "Characters-active_\u0422"
-    21300050: "Characters-active_\u0424"
-    21300052: "Characters-active_\u0425"
-    21300054: "Characters-active_\u0426"
-    21300056: "Characters-active_\u0427"
-    21300058: "Characters-active_\u0428"
-    21300060: "Characters-active_\u042C"
-    21300062: "Characters-active_\u042A"
-    21300064: "Characters-active_\u0429"
+    21300000: "Characters-active_\u0411"
+    21300002: "Characters-active_\u0412"
+    21300004: "Characters-active_\u0413"
+    21300006: "Characters-active_\u0414"
+    21300008: "Characters-active_\u0416"
+    21300010: "Characters-active_\u0417"
+    21300012: "Characters-active_\u0419"
+    21300014: "Characters-active_\u041A"
+    21300016: "Characters-active_\u041B"
+    21300018: "Characters-active_\u041C"
+    21300020: "Characters-active_\u041D"
+    21300022: "Characters-active_\u041F"
+    21300024: "Characters-active_\u0420"
+    21300026: "Characters-active_\u0421"
+    21300028: "Characters-active_\u0422"
+    21300030: "Characters-active_\u0424"
+    21300032: "Characters-active_\u0425"
+    21300034: "Characters-active_\u0426"
+    21300036: "Characters-active_\u0427"
+    21300038: "Characters-active_\u0428"
+    21300040: "Characters-active_\u042C"
+    21300042: "Characters-active_\u042A"
+    21300044: "Characters-active_\u0429"
+    21300046: "Characters-active_\u0415"
+    21300048: "Characters-active_\u0401"
+    21300050: "Characters-active_\u042E"
+    21300052: "Characters-active_\u042F"
+    21300054: "Characters-active_\u042D"
+    21300056: "Characters-active_\u0418"
+    21300058: "Characters-active_\u042B"
+    21300060: "Characters-active_\u041E"
+    21300062: "Characters-active_\u0423"
+    21300064: "Characters-active_\u0410"
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -63,7 +63,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -89,33 +89,33 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,153 +124,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Characters-active_\u0410"
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u0423"
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u041E"
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u042B"
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u0418"
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u042D"
-      rect:
-        serializedVersion: 2
-        x: 575
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u042F"
-      rect:
-        serializedVersion: 2
-        x: 680
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u042E"
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u0401"
-      rect:
-        serializedVersion: 2
-        x: 891
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "Characters-active_\u0415"
-      rect:
-        serializedVersion: 2
-        x: 996
-        y: 55
-        width: 87
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: "Characters-active_\u0411"
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 55
-        width: 88
-        height: 90
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +141,10 @@ TextureImporter:
       name: "Characters-active_\u0412"
       rect:
         serializedVersion: 2
-        x: 1209
-        y: 55
-        width: 87
-        height: 90
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +155,10 @@ TextureImporter:
       name: "Characters-active_\u0413"
       rect:
         serializedVersion: 2
-        x: 1314
-        y: 55
-        width: 87
-        height: 90
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +169,10 @@ TextureImporter:
       name: "Characters-active_\u0414"
       rect:
         serializedVersion: 2
-        x: 1419
-        y: 55
-        width: 87
-        height: 90
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +183,10 @@ TextureImporter:
       name: "Characters-active_\u0416"
       rect:
         serializedVersion: 2
-        x: 1524
-        y: 55
-        width: 87
-        height: 90
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +197,10 @@ TextureImporter:
       name: "Characters-active_\u0417"
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 55
-        width: 87
-        height: 90
+        x: 400
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +211,10 @@ TextureImporter:
       name: "Characters-active_\u0419"
       rect:
         serializedVersion: 2
-        x: 1743
-        y: 55
-        width: 87
-        height: 90
+        x: 480
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +225,10 @@ TextureImporter:
       name: "Characters-active_\u041A"
       rect:
         serializedVersion: 2
-        x: 1848
-        y: 55
-        width: 87
-        height: 90
+        x: 560
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +239,10 @@ TextureImporter:
       name: "Characters-active_\u041B"
       rect:
         serializedVersion: 2
-        x: 1953
-        y: 55
-        width: 87
-        height: 90
+        x: 640
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,10 +253,10 @@ TextureImporter:
       name: "Characters-active_\u041C"
       rect:
         serializedVersion: 2
-        x: 2059
-        y: 55
-        width: 87
-        height: 90
+        x: 720
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +267,10 @@ TextureImporter:
       name: "Characters-active_\u041D"
       rect:
         serializedVersion: 2
-        x: 2164
-        y: 55
-        width: 87
-        height: 90
+        x: 800
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +281,10 @@ TextureImporter:
       name: "Characters-active_\u041F"
       rect:
         serializedVersion: 2
-        x: 2269
-        y: 55
-        width: 88
-        height: 90
+        x: 880
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,10 +295,10 @@ TextureImporter:
       name: "Characters-active_\u0420"
       rect:
         serializedVersion: 2
-        x: 2374
-        y: 55
-        width: 88
-        height: 90
+        x: 960
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +309,10 @@ TextureImporter:
       name: "Characters-active_\u0421"
       rect:
         serializedVersion: 2
-        x: 2488
-        y: 55
-        width: 88
-        height: 90
+        x: 1040
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +323,10 @@ TextureImporter:
       name: "Characters-active_\u0422"
       rect:
         serializedVersion: 2
-        x: 2593
-        y: 55
-        width: 88
-        height: 90
+        x: 1120
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +337,10 @@ TextureImporter:
       name: "Characters-active_\u0424"
       rect:
         serializedVersion: 2
-        x: 2698
-        y: 55
-        width: 88
-        height: 90
+        x: 1200
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +351,10 @@ TextureImporter:
       name: "Characters-active_\u0425"
       rect:
         serializedVersion: 2
-        x: 2803
-        y: 55
-        width: 87
-        height: 90
+        x: 1280
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +365,10 @@ TextureImporter:
       name: "Characters-active_\u0426"
       rect:
         serializedVersion: 2
-        x: 2907
-        y: 55
-        width: 88
-        height: 90
+        x: 1360
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,10 +379,10 @@ TextureImporter:
       name: "Characters-active_\u0427"
       rect:
         serializedVersion: 2
-        x: 3012
-        y: 55
-        width: 88
-        height: 90
+        x: 1440
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +393,10 @@ TextureImporter:
       name: "Characters-active_\u0428"
       rect:
         serializedVersion: 2
-        x: 3128
-        y: 55
-        width: 87
-        height: 90
+        x: 1520
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +407,10 @@ TextureImporter:
       name: "Characters-active_\u042C"
       rect:
         serializedVersion: 2
-        x: 3233
-        y: 55
-        width: 88
-        height: 90
+        x: 1600
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,10 +421,10 @@ TextureImporter:
       name: "Characters-active_\u042A"
       rect:
         serializedVersion: 2
-        x: 3338
-        y: 55
-        width: 88
-        height: 90
+        x: 1680
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,10 +435,150 @@ TextureImporter:
       name: "Characters-active_\u0429"
       rect:
         serializedVersion: 2
-        x: 3444
-        y: 55
-        width: 87
-        height: 90
+        x: 1760
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u0415"
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u0401"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u042E"
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u042F"
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u042D"
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u0418"
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u042B"
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u041E"
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u0423"
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Characters-active_\u0410"
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
