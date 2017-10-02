@@ -17,6 +17,11 @@ public class StateController : MonoSingleton<StateController>
     public Event OnEndRoundEnd = new Event();
 
     [SerializeField]
+    public State CurrentState
+    {
+        get { return _currentState; }
+    }
+    [SerializeField]
     private State _currentState = State.MainMenu;
 
     public void MainMenuState()
@@ -37,7 +42,6 @@ public class StateController : MonoSingleton<StateController>
         SetState(State.Game);
         OnGameStart.Invoke();
     }
-
 
     public void EndRoundState(int collected, int record)
     {

@@ -11,40 +11,50 @@ public class DisplacementController : MonoSingleton<DisplacementController>
 
     private const float ALLOWABLE_ERROR = .00001f;
 
-    private List<MovementInfo> _objects = new List<MovementInfo>();
+    private Dictionary<Transform, MovementInfo> _objects = new Dictionary<Transform, MovementInfo>();
 
     public void Update()
     {
-        foreach (var movementInfo in _objects)
+        foreach (var pair in _objects)
         {
-            var passedTime = Time.time - movementInfo.StartTime;
-            var pDist = passedTime / movementInfo.Distance / movementInfo.Speed;
+            var passedTime = Time.time - pair.Value.StartTime;
+            var pDist = passedTime / pair.Value.Distance / pair.Value.Speed;
 
-            movementInfo.Obj.localPosition = Vector3.Lerp(movementInfo.Start, movementInfo.Finish, pDist);
-            if (movementInfo.OnMoveHandler != null && movementInfo.OnMoveHandler.GetInvocationList().Length != 0)
+            pair.Value.Obj.localPosition = Vector3.Lerp(pair.Value.Start, pair.Value.Finish, pDist);
+            if (pair.Value.OnMoveHandler != null && pair.Value.OnMoveHandler.GetInvocationList().Length != 0)
             {
-                movementInfo.OnMoveHandler.Invoke(pDist);
+                pair.Value.OnMoveHandler.Invoke(pDist);
             }
         }
 
-        var toRemove = new List<MovementInfo>();
-        foreach (var movementInfo in _objects)
+        var keysToRemove = new List<Transform>();
+        foreach (var pair in _objects)
         {
-            if (Math.Abs(Vector3.Distance(movementInfo.Obj.transform.localPosition, movementInfo.Finish)) < ALLOWABLE_ERROR)
+            if (Math.Abs(Vector3.Distance(pair.Value.Obj.transform.localPosition, pair.Value.Finish)) < ALLOWABLE_ERROR)
             {
-                toRemove.Add(movementInfo);
-                if (movementInfo.OnCompleteHandler != null && movementInfo.OnCompleteHandler.GetInvocationList().Length != 0)
+                keysToRemove.Add(pair.Key);
+                if (pair.Value.OnCompleteHandler != null && pair.Value.OnCompleteHandler.GetInvocationList().Length != 0)
                 {
-                    movementInfo.OnCompleteHandler();
+                    pair.Value.OnCompleteHandler();
                 }
             }
         }
-        _objects = _objects.Except(toRemove).ToList();
+
+        foreach (var key in keysToRemove)
+        {
+            _objects.Remove(key);
+        }
     }
 
     public void Move(Transform obj, Vector2 start, Vector2 finish, float timeToComplete, OnCompletCallback onCompletCallback = null, OnMoveCallback onMoveCallback = null)
     {
-        _objects.Add(new MovementInfo(obj, start, finish, timeToComplete, onCompletCallback, onMoveCallback));
+        if (_objects.ContainsKey(obj))
+        {
+            var newInfo = new MovementInfo(obj, obj.localPosition, finish, timeToComplete, onCompletCallback, onMoveCallback);
+            _objects[obj] = newInfo;
+            return;
+        }
+        _objects.Add(obj, new MovementInfo(obj, start, finish, timeToComplete, onCompletCallback, onMoveCallback));
     }
 
     public void StopAll()

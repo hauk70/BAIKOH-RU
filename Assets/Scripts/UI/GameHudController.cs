@@ -32,6 +32,7 @@ public class GameHudController : MonoBehaviour
 
     public void MoreCharacters()
     {
+        Debug.Log("GameHudController MoreCharacters");
         GameController.Instance.SpawnMoreCharacters();
     }
 

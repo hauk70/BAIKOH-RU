@@ -9,20 +9,15 @@ using Random = UnityEngine.Random;
 
 public class GameController : MonoSingleton<GameController>
 {
-    /*
-     TODO 
-     Canvas Group
-     Aspect Scaling
-     anchors
-    */
 
     public const int ROWS_STARTED = 6;
     public const int ROWS = 8;
     public const int COLUMNS = 8;
-    public const int ROUND_DURATION = 60;
+    public const int STARTED_ROUND_DURATION = 60;
+    public const int WORD_REWARD = 3;
     public const float TIMER_TICK_INTERVAL = 1;
     public const float ADDITIONAL_CHARACTERS_TIMER_INTERVAL = 4;
-    public const float FALL_SPEED = .225f;
+    public const float FALL_SPEED = .14f;
 
     public Event<int> TimerCounterChangedEvent = new Event<int>();
     public Event<int> CollectedScoreChangedEvent = new Event<int>();
@@ -35,6 +30,8 @@ public class GameController : MonoSingleton<GameController>
     public GameObject Field;
 
     private CellData[,] _field;
+
+    private int _currentRoundDuration;
 
     private HashSet<string> _words;
     private Dictionary<char, CharacterRule> _rules;
@@ -49,10 +46,8 @@ public class GameController : MonoSingleton<GameController>
 
     private bool _isMoreCharactersUsed;
 
-    private IDisposable _roundTimer;
-    private IDisposable _characterFallTimer;
     private int _ticksOfRound;
-    private bool isTimerWorked;
+    private bool _isTimerWorked;
 
     public override void Awake()
     {
@@ -84,6 +79,9 @@ public class GameController : MonoSingleton<GameController>
         {
             return;
         }
+
+        _currentRoundDuration += WORD_REWARD;
+        TimerCounterChangedEvent.Invoke(_currentRoundDuration - _ticksOfRound);
 
         foreach (var cell in _selectedCells)
         {
@@ -120,6 +118,7 @@ public class GameController : MonoSingleton<GameController>
 
     public void SpawnMoreCharacters()
     {
+        Debug.Log("GameController MoreCharacters");
         if (_isMoreCharactersUsed)
         {
             return;
@@ -130,6 +129,8 @@ public class GameController : MonoSingleton<GameController>
         {
             return;
         }
+
+        Debug.Log("GameController MoreCharacters charsCountToSpawn "+charsCountToSpawn);
 
         _isMoreCharactersUsed = true;
 
@@ -153,6 +154,10 @@ public class GameController : MonoSingleton<GameController>
 
         foreach (var c in usedChars)
         {
+            if (usedChars[vowels[c.Key]] + 1 > 2)
+            {
+                continue;
+            }
             if (_rules[c.Key].IsVowel)
             {
                 vowels.Add(c.Key);
@@ -163,23 +168,43 @@ public class GameController : MonoSingleton<GameController>
             }
         }
 
+        Debug.Log("GameController MoreCharacters vowelsCount " + vowelsCount);
+        Debug.Log("GameController MoreCharacters consonantsCount " + consonantsCount);
+
         while (vowelsCount > 0)
         {
+            if (vowels.Count == 0)
+            {
+                break;
+            }
+
             var index = Random.Range(0, vowels.Count);
+
             if (usedChars[vowels[index]] + 1 > 2)
             {
+                vowels.Remove(vowels[index]);
                 continue;
             }
+
             charsToSpawn.Add(vowels[index]);
             usedChars[vowels[index]]++;
             vowelsCount--;
         }
 
+        Debug.Log("GameController MoreCharacters vowelsCount done");
+
         while (consonantsCount > 0)
         {
+            if (consonants.Count == 0)
+            {
+                break;
+            }
+
             var index = Random.Range(0, consonants.Count);
+
             if (usedChars[consonants[index]] + 1 > 2)
             {
+                consonants.Remove(consonants[index]);
                 continue;
             }
             charsToSpawn.Add(consonants[index]);
@@ -187,10 +212,47 @@ public class GameController : MonoSingleton<GameController>
             consonantsCount--;
         }
 
+        Debug.Log("GameController MoreCharacters consonantsCount done");
+
         foreach (var charToSpawn in charsToSpawn)
         {
             SpawnCharacter(GetEmptyCellPosition(), charToSpawn);
         }
+    }
+
+    public Vector2 GetEmptyCellPosition()
+    {
+        if (_cells.Count == ROWS * COLUMNS)
+        {
+            return -Vector2.one;
+        }
+
+        int higgestEmptyRowIndex = ROWS - 1;
+
+        for (int i = ROWS - 1; i >= 0; i--)
+        {
+            for (int j = 0; j < COLUMNS; j++)
+            {
+                if (_field[i, j] == null && higgestEmptyRowIndex > i)
+                {
+                    higgestEmptyRowIndex = i;
+                    goto endSycle;
+                }
+            }
+        }
+        endSycle:
+
+        List<int> columnIndexes = new List<int>();
+
+        for (int i = 0; i < COLUMNS; i++)
+        {
+            if (_field[higgestEmptyRowIndex, i] == null)
+            {
+                columnIndexes.Add(i);
+            }
+        }
+
+        return new Vector2(columnIndexes[Random.Range(0, columnIndexes.Count)], -higgestEmptyRowIndex);
     }
 
     private void LoadRules()
@@ -235,7 +297,9 @@ public class GameController : MonoSingleton<GameController>
     {
         _collectedScoreInRound = 0;
         _ticksOfRound = 0;
+        _isMoreCharactersUsed = false;
         _selectedCells = new List<CellData>();
+        _currentRoundDuration = STARTED_ROUND_DURATION;
 
         char[] characters = GenerateCharactersArray();
 
@@ -261,8 +325,11 @@ public class GameController : MonoSingleton<GameController>
             }
         }
 
-        StateController.Instance.GameState();
+
+        TimerCounterChangedEvent.Invoke(STARTED_ROUND_DURATION);
         WordChangedEvent.Invoke("");
+        CollectedScoreChangedEvent.Invoke(0);
+        StateController.Instance.GameState();
     }
 
     private char[] GenerateCharactersArray()
@@ -400,18 +467,18 @@ public class GameController : MonoSingleton<GameController>
 
     private IEnumerator TimerTick()
     {
-        isTimerWorked = true;
-        while (isTimerWorked)
+        _isTimerWorked = true;
+        while (_isTimerWorked)
         {
             yield return new WaitForSeconds(TIMER_TICK_INTERVAL);
 
             _ticksOfRound++;
 
-            TimerCounterChangedEvent.Invoke(ROUND_DURATION - _ticksOfRound);
+            TimerCounterChangedEvent.Invoke(_currentRoundDuration - _ticksOfRound);
 
-            if (_ticksOfRound >= ROUND_DURATION)
+            if (_ticksOfRound >= _currentRoundDuration)
             {
-                isTimerWorked = false;
+                _isTimerWorked = false;
 
                 if (_collectedScoreInRound > _maxCollectedScore)
                 {
@@ -425,7 +492,7 @@ public class GameController : MonoSingleton<GameController>
 
     private IEnumerator SpawnAdditionalCharacter()
     {
-        while (isTimerWorked)
+        while (_isTimerWorked)
         {
             yield return new WaitForSeconds(ADDITIONAL_CHARACTERS_TIMER_INTERVAL);
 
@@ -438,6 +505,12 @@ public class GameController : MonoSingleton<GameController>
 
     private void SpawnCharacter(Vector2 position, char c)
     {
+        Debug.Log("GameController SpawnCharacter");
+        if (position == -Vector2.one)
+        {
+            return;
+        }
+
         var character = ObjectPoolManager.Instance.Get(CellPrefab) as CellData;
         character.Setup(c, _charactersSprites[c], _charactersActiveSprites[c]);
         character.transform.SetParent(Field.transform);
@@ -449,39 +522,9 @@ public class GameController : MonoSingleton<GameController>
         DisplacementController.Instance.Move(character.transform, character.transform.localPosition, new Vector2(position.x, position.y), FALL_SPEED);
     }
 
-    private Vector2 GetEmptyCellPosition()
-    {
-        int higgestEmptyRowIndex = ROWS - 1;
-
-        for (int i = ROWS - 1; i >= 0; i--)
-        {
-            for (int j = 0; j < COLUMNS; j++)
-            {
-                if (_field[i, j] == null && higgestEmptyRowIndex > i)
-                {
-                    higgestEmptyRowIndex = i;
-                    goto endSycle;
-                }
-            }
-        }
-        endSycle:
-
-        List<int> columnIndexes = new List<int>();
-
-        for (int i = 0; i < COLUMNS; i++)
-        {
-            if (_field[higgestEmptyRowIndex, i] == null)
-            {
-                columnIndexes.Add(i);
-            }
-        }
-
-        return new Vector2(columnIndexes[Random.Range(0, columnIndexes.Count)], -higgestEmptyRowIndex);
-    }
-
     private void ClearField()
     {
-        isTimerWorked = false;
+        _isTimerWorked = false;
 
         var children = Field.GetComponentsInChildren<CellData>();
         foreach (CellData child in children)
@@ -495,6 +538,8 @@ public class GameController : MonoSingleton<GameController>
         _cells = null;
 
         Field.SetActive(false);
+
+        StopAllCoroutines();
     }
 
     private void MoveCells()
